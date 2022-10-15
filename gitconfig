@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = valentinjheinrich@gmail.com
+	name = Valentin Heinrich
