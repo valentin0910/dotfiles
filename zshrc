@@ -1,4 +1,7 @@
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
@@ -70,14 +73,14 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
-alias python=/usr/bin/python3
+alias python=/Users/valentinjuliusheinrich/.pyenv/shims/python
+PATH=$(pyenv root)/shims:$PATH
+eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
-PATH=$(pyenv root)/shims:$PATH
-eval "$(direnv hook zsh)"
-eval "$(direnv hook zsh)"
-eval "$(direnv hook zsh)"
